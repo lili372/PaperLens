@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "PaperLens"
+version = "0.2.0"
+description = "面向科研综述分析与研究方向推荐的论文分析工具"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+requests = ">=2.32.5,<3.0.0"
+python-dotenv = ">=1.1.1,<2.0.0"
+pyyaml = ">=6.0.2,<7.0.0"
+tenacity = ">=9.1.2,<10.0.0"
+arxiv = ">=2.2.0,<3.0.0"
+aiohttp = ">=3.12.15,<4.0.0"
+langchain-community = ">=0.3.29,<0.4.0"
+simhash = ">=2.1.2,<3.0.0"
+pymupdf = ">=1.26.4,<2.0.0"
+pyautogen = ">=0.2.20,<0.3.0"
+autogen-ext = {extras = ["openai"], version = "^0.7.4"}
+autogen-agentchat = "^0.7.4"
+scikit-learn = "^1.7.1"
+google-search-results = "^2.4.2"
+fastapi = "^0.116.1"
+sse-starlette = "^3.0.2"
+uvicorn = "^0.35.0"
+langgraph = "^0.6.7"
+chromadb = "^1.0.20"
+python-docx = "^1.2.0"
+markdownify = "^1.2.2"
+pandas = "^2.3.3"
+beautifulsoup4 = "^4.14.3"
+python-multipart = "^0.0.21"
+volcengine-python-sdk = {extras = ["ark"], version = "^5.0.6"}
+
+
+
+
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

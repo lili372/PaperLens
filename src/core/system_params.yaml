@@ -1,0 +1,68 @@
+# 系统参数配置文件
+
+SAVE_DIR: "data"
+# 知识库配置
+KB_TYPE: "chroma"
+enable_reranker: False
+tmpdb_top_k: 2
+tmpdb_similarity_threshold: 0.05
+top_k: 5
+similarity_threshold: 0.05
+
+# 日志配置
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/app.log
+  max_bytes: 10485760
+  backup_count: 5
+
+# 缓存配置
+cache:
+  enabled: true
+  type: memory
+  ttl: 3600
+  max_size: 1000
+
+# 请求配置
+request:
+  timeout: 30
+  max_retries: 3
+  retry_delay: 1
+
+# V2 选题建议 PDF 下载配置
+arxiv_search_timeout_seconds: 20
+proposal_pdf_timeout_seconds: 10
+proposal_pdf_max_retries: 1
+proposal_pdf_retry_delay_seconds: 1.0
+proposal_pdf_success_per_query_limit: 3
+proposal_pdf_target_success_count: 9
+proposal_pdf_reuse_cross_run_cache: false
+proposal_pdf_max_analysis_pages: 25
+proposal_profile_concurrency: 3
+proposal_review_concurrency: 3
+
+# 并发配置
+concurrency:
+  max_workers: 4
+  max_connections: 10
+
+# 文件路径配置
+paths:
+  data_dir: data
+  cache_dir: cache
+  output_dir: output
+  temp_dir: temp
+
+# 性能配置
+performance:
+  batch_size: 10
+  chunk_size: 1000
+  enable_streaming: true
+
+# 安全配置
+security:
+  enable_rate_limit: true
+  rate_limit_per_minute: 60
+  enable_cors: true
+  allowed_origins: "*"
